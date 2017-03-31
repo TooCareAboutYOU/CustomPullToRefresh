@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">蜜家</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="trip_to_india">Trip to India</string>
+    <string name="trip_to_italy">Trip to Italy</string>
+    <string name="trip_to_indonesia">Trip to Indonesia</string>
+    
+    <string name="activity_demo_new_paytype">支付方式</string>
+    <string name="activity_demo_new_name">名称：</string>
+    <string name="activity_demo_new_namevalue">Small Text</string>
+    <string name="activity_demo_new_price">价格：</string>
+    <string name="activity_demo_new_pricevalue">Small Text</string>
+    <string name="activity_demo_new_subscribe">开通会员</string>
+    <string name="activity_demo_new_stopsubscribe">退订会员</string>
+    <string name="activity_demo_new_mediaprogram">媒资信息查询接口</string>
+    <string name="activity_demo_new_playbill">节目单查询接口</string>
+    <string name="activity_demo_new_opensearch">节目搜索接口</string>
+    
+</resources>
