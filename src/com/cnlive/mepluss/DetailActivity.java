@@ -63,6 +63,7 @@ public class DetailActivity extends Activity {
 	private RadioGroup payTypeGroup;
 	private TextView name;
 	private TextView price;
+	//éªŒè¯ç 
 	//private EditText captchaEdit;
 	//private LinearLayout validateLayout;
 	private VideoView videoView;
@@ -181,7 +182,7 @@ public class DetailActivity extends Activity {
 	
 
 	/**
-	 * Åú¼Û
+	 * ï¿½ï¿½ï¿½ï¿½
 	 * @param info
 	 */
 	private void queryPrice (QueryPriceInfo info) 
@@ -235,7 +236,7 @@ public class DetailActivity extends Activity {
 	}
 
 	/**
-	 * ¶©¹º
+	 * ï¿½ï¿½ï¿½ï¿½
 	 */
 	private void subscribe () 
 	{
@@ -247,13 +248,13 @@ public class DetailActivity extends Activity {
 
 		if (SdkParams.services == null || SdkParams.services.size () < 1) 
 		{
-			Toast toast 	= Toast.makeText (DetailActivity.this, "Åú¼ÛÊ§°Ü£¬ÎŞ·¨¶©¹º£¡", Toast.LENGTH_LONG);
+			Toast toast 	= Toast.makeText (DetailActivity.this, "ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½Ş·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_LONG);
 			toast.show ();
 			return;
 		}
 		if (SdkParams.currentService == null || SdkParams.currentPayment == null)
 		{
-			Toast toast 	= Toast.makeText (DetailActivity.this, "currentService»òcurrentPayment²»ÄÜÎª¿Õ", Toast.LENGTH_LONG);
+			Toast toast 	= Toast.makeText (DetailActivity.this, "currentServiceï¿½ï¿½currentPaymentï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½", Toast.LENGTH_LONG);
 			toast.show ();
 			return;
 		}
@@ -275,11 +276,11 @@ public class DetailActivity extends Activity {
 				Log.d(TAG, str);
 				if (ResultCode.ACCEPTED.name().equals(resultCode)
 						&& order != null) {
-					Toast toast = Toast.makeText(DetailActivity.this, "¶©¹º×´Ì¬="
+					Toast toast = Toast.makeText(DetailActivity.this, "ï¿½ï¿½ï¿½ï¿½×´Ì¬="
 							+ order.getStatus(), Toast.LENGTH_LONG);
 					toast.show();
 
-					// ¼øÈ¨
+					// ï¿½ï¿½È¨
 					serviceAuth();
 				}else {
 					Toast toast = Toast.makeText(DetailActivity.this, str,
@@ -293,7 +294,7 @@ public class DetailActivity extends Activity {
 	
 	boolean isSuccess 	= false;
 	/**
-	 * ¼øÈ¨
+	 * ï¿½ï¿½È¨
 	 * @return
 	 */
 	private boolean serviceAuth () 
@@ -315,7 +316,7 @@ public class DetailActivity extends Activity {
 				if (isSuccess) 
 				{
 					url 	= playExtResponse.getPlayUrl ();
-					info 	= String.format ("¼øÈ¨³É¹¦£¡²¥·ÅµØÖ·Îª: %s ÏÂÔØµØÖ·£º%s", url, playExtResponse.getDownloadUrl ());
+					info 	= String.format ("ï¿½ï¿½È¨ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½Ö·Îª: %s ï¿½ï¿½ï¿½Øµï¿½Ö·ï¿½ï¿½%s", url, playExtResponse.getDownloadUrl ());
 				} 
 				else 
 				{
@@ -323,7 +324,7 @@ public class DetailActivity extends Activity {
 					{
 						url 	= playExtResponse.getPlayUrl4Trial ();
 					}
-					info 	= String.format ("¼øÈ¨Ê§°Ü£¡ÊÔ²¥µØÖ·Îª: %s", url);
+					info 	= String.format ("ï¿½ï¿½È¨Ê§ï¿½Ü£ï¿½ï¿½Ô²ï¿½ï¿½ï¿½Ö·Îª: %s", url);
 				}
 
 				Toast toast  	= Toast.makeText(DetailActivity.this, info, Toast.LENGTH_LONG);
@@ -341,18 +342,18 @@ public class DetailActivity extends Activity {
 	}
 	
 	/**
-	 * ½ÚÄ¿µ¥²éÑ¯½Ó¿Ú
+	 * ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½Ó¿ï¿½
 	 */
 	private void mediaPlaybillSearch ()
 	{
 		MediaPlaybillSearchInfo mMediaPlaybillSearchInfo = new MediaPlaybillSearchInfo ();
 		mMediaPlaybillSearchInfo.setKey ("621399374");
-//		mMediaPlaybillSearchInfo.setDate ("20151212");//Ëù²éÑ¯½ÚÄ¿µ¥ÈÕÆÚÊ±¼ä¸ñÊ½£ºYYYYMMDD ²»ÌîÊ±Ä¬ÈÏÈ«Á¿½ÚÄ¿µ¥ÁĞ±í
+//		mMediaPlaybillSearchInfo.setDate ("20151212");//ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ê½ï¿½ï¿½YYYYMMDD ï¿½ï¿½ï¿½ï¿½Ê±Ä¬ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ğ±ï¿½
 		SdkParams.sdk.mediaPlaybillSearch (DetailActivity.this, mMediaPlaybillSearchInfo, mediaPlayBillSearchHandler);
 	}
 	
 	/**
-	 * Ã½×ÊĞÅÏ¢²éÑ¯½Ó¿Ú
+	 * Ã½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ñ¯ï¿½Ó¿ï¿½
 	 */
 	private void mediaProgramSearch ()
 	{
@@ -361,7 +362,7 @@ public class DetailActivity extends Activity {
 	}
 	
 	/**
-	 * ½ÚÄ¿ËÑË÷½Ó¿Ú
+	 * ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
 	 */
 	private void openSrearch ()
 	{
@@ -370,7 +371,7 @@ public class DetailActivity extends Activity {
 		packId.add("1002821");
 		
 		OpenSearchInfo mOpenSearchInfo = new OpenSearchInfo ();
-		mOpenSearchInfo.setKeyword("Çà´º");
+		mOpenSearchInfo.setKeyword("ï¿½à´º");
 		mOpenSearchInfo.setPackId(packId);
 		
 		SdkParams.sdk.openSearch(DetailActivity.this, mOpenSearchInfo, openSearchHandler);
@@ -400,7 +401,7 @@ public class DetailActivity extends Activity {
 			if (ResultCode.SUCCESS.name ().equals (resultCode)) 
 			{
 
-				// DemoÊ¾Àı´úÂë£¬¿ª·¢Õß¿É²»´æÓÃ»§µÇÂ¼ĞÅÏ¢
+				// DemoÊ¾ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ß¿É²ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ï¢
 				SharedPreferences pref 	= DetailActivity.this.getSharedPreferences (PREFERENCES_DEMO, Context.MODE_PRIVATE);
 				String userid 			= pref.getString ("userid", "");
 				String usernum 			= pref.getString ("usernum", "");
@@ -416,13 +417,13 @@ public class DetailActivity extends Activity {
 
 				Map<String, String> goodsProperties 	= new HashMap<String, String> ();
 				goodsProperties.put ("resourceId", SdkParams.RESOURCE_ID);
-				// °´´Î¶©¹ºgoodsProperties±ØĞë´«ÈëresourceId
+				// ï¿½ï¿½ï¿½Î¶ï¿½ï¿½ï¿½goodsPropertiesï¿½ï¿½ï¿½ë´«ï¿½ï¿½resourceId
 				info.setGoodsProperties (goodsProperties);
 
-				// Åú¼Û
+				// ï¿½ï¿½ï¿½ï¿½
 				queryPrice (info);
 
-				// ¼øÈ¨
+				// ï¿½ï¿½È¨
 				serviceAuth ();
 			} 
 			else 
@@ -438,13 +439,13 @@ public class DetailActivity extends Activity {
 		@Override
 		public void onComplete (Bundle values) 
 		{
-			// ´Ó Bundle ÖĞ½âÎö Token
+			// ï¿½ï¿½ Bundle ï¿½Ğ½ï¿½ï¿½ï¿½ Token
 			SdkParams.mAccessToken 	= Oauth2AccessToken.parseAccessToken (values);
 			if (SdkParams.mAccessToken.isSessionValid ()) 
 			{
 				Log.i (TAG, "accessToken=" + SdkParams.mAccessToken.getToken ());
 
-				// ½¨Òé¿ª·¢Õß±£´æÓÃ»§µÇÂ¼ĞÅÏ¢£¬ÔÚtokenÊ§Ğ§ÒÔÇ°¿ÉÎŞĞèµÇÂ¼
+				// ï¿½ï¿½ï¿½é¿ªï¿½ï¿½ï¿½ß±ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½tokenÊ§Ğ§ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼
 				SharedPreferences pref 	= DetailActivity.this.getSharedPreferences (PREFERENCES_DEMO, Context.MODE_PRIVATE);
 				Editor editor 			= pref.edit ();
 				editor.putString ("userid", SdkParams.mAccessToken.getUserId ());
@@ -461,7 +462,7 @@ public class DetailActivity extends Activity {
 			} 
 			else 
 			{
-				// µ±Äú×¢²áµÄÓ¦ÓÃ³ÌĞòÇ©Ãû²»ÕıÈ·Ê±£¬¾Í»áÊÕµ½ Code£¬ÇëÈ·±£Ç©ÃûÕıÈ·
+				// ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½Ó¦ï¿½Ã³ï¿½ï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·Ê±ï¿½ï¿½ï¿½Í»ï¿½ï¿½Õµï¿½ Codeï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½È·
 				String code 	= values.getString ("code");
 				Log.i (TAG, "code=" + code);
 			}
